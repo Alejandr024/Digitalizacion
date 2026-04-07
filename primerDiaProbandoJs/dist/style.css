@@ -1,9 +1,0 @@
-.contenedor {
- display: flex;
- gap: 20px;
-}
-
-.caja {
- padding: 20px;
- border: 1px solid black;
-}

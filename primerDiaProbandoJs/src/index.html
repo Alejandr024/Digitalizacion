@@ -1,12 +1,26 @@
-<div class="caja" onclick="eventoClick(this)">Click</div>
-<div class="caja" onmouseover="eventoOver(this)">Mouse over</div>
-<div class="caja" onmouseout="eventoOut(this)">Mouse out</div>
-<div class="caja" onmousedown="eventoDown(this)">Mouse down</div>
-<div class="caja" onmouseup="eventoUp(this)">Mouse up</div>
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Js</title>
+        <link rel="stylesheet" href="./style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div class="caja" onclick="eventoClick(this)">Click</div>
+        <div class="caja" onmouseover="eventoOver(this)">Mouse over</div>
+        <div class="caja" onmouseout="eventoOut(this)">Mouse out</div>
+        <div class="caja" onmousedown="eventoDown(this)">Pulsa</div>
+        <div class="caja" onmouseup="eventoUp(this)">Pulsa y Suelta</div>
 
-<div class="caja">
-<input type="text" oninput="eventoInput(this)">
-<span>Texto:</span>
-</div>
+        <div class="caja">
+        <input type="text" oninput="eventoInput(this)">
+        <span>Texto:</span>
+        </div>
 
-<div class="caja" ondblclick="eventoDouble(this)">Haz doble click</div>
+        <div class="caja" ondblclick="eventoDouble(this)">Haz doble click</div>
+
+    </body>
+</html>
