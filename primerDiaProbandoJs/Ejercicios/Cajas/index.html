@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> <!-- Para la fuente de texto-->
+      <script src="script.js"></script>
+      <title>Cajas</title>
+  </head>
+  <body>
+      <div class="cajas" onclick="eventoClick(this)">
+        <h4 class="cajas">Fútbol</h4>
+      </div>
+      <div class="cajas" onmouseover="eventoOver(this)">
+        <h4 class="cajas">Videojuegos</h4>
+      </div>
+      <div class="cajas" onmouseout="eventoOut(this)">
+        <h4 class="cajas">Informática</h4>
+      </div>
+      <div class="cajas" onmousedown="eventoDown(this)">
+        <h4 class="cajas">Futsal</h4>
+      </div>
+      <div class="cajas" ondblclick="eventoDouble(this)">
+        <h4 class="cajas">HTML</h4>
+      </div>
+      <div class="cajas" onmouseup="eventoUp(this)">
+        <h4 class="cajas">CSS</h4>
+      </div>
+      <div class="cajas">
+        <h4 class="cajas">JS</h4>
+        <input type="text" oninput="eventoInput(this)">
+        <span>
+          ¿Me lo dices tú?: <span id="resultado"></span> 
+        </span>
+      </div>
+
+
+    
+  </body>
+</html>
