@@ -1,0 +1,210 @@
+* {
+  background: grey;
+}
+
+h4,
+span,
+h1 {
+  font-family: "Roboto", san-serif;
+  color: black;
+  background: none;
+  text-align: center;
+}
+
+div.cajas {
+  display: flex;
+  float: left;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+div.uso {
+  display: flex;
+  float: left;
+  width: 450px;
+  height: 450px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 20px 20px 20px 20px;
+  border: 3px solid black;
+  border-radius: 15%;
+  padding: 20px;
+}
+
+div.funcionamiento {
+  display: flex;
+  float: left;
+  width: 450px;
+  height: 450px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 20px 20px 20px 20px;
+  border: 3px solid blue;
+  border-radius: 15%;
+  padding: 20px;
+}
+
+div.datos {
+  display: flex;
+  float: left;
+  width: 450px;
+  height: 450px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 20px 20px 20px 20px;
+  border: 3px solid greenyellow;
+  border-radius: 15%;
+  padding: 20px;
+}
+
+div.ventajas {
+  display: flex;
+  float: left;
+  width: 450px;
+  height: 450px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 20px 20px 20px 20px;
+  border: 3px solid green;
+  border-radius: 15%;
+  padding: 20px;
+}
+
+div.riesgos {
+  display: flex;
+  float: left;
+  width: 450px;
+  height: 450px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 20px 20px 20px 20px;
+  border: 3px solid red;
+  border-radius: 15%;
+  padding: 20px;
+}
+
+div.opinion {
+  display: flex;
+  float: left;
+  width: 450px;
+  height: 450px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 20px 20px 20px 20px;
+  border: 3px solid white;
+  border-radius: 15%;
+  padding: 20px;
+}
+
+
+div.cajasuso {
+  display: flex;
+  float: left;
+  flex-wrap: wrap;
+  width: 50%;
+  height: 25%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 10px 10px 10px 10px;
+  border: 3px solid black;
+  border-radius: 15%;
+  padding: 20px;
+}
+
+div.cajasfuncionamiento {
+  display: flex;
+  float: left;
+  flex-wrap: wrap;
+  width: 50%;
+  height: 25%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 10px 10px 10px 10px;
+  border: 3px solid blue;
+  border-radius: 15%;
+  padding: 20px;
+}
+
+div.cajasdatos {
+  display: flex;
+  float: left;
+  flex-wrap: wrap;
+  width: 50%;
+  height: 25%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 10px 10px 10px 10px;
+  border: 3px solid greenyellow;
+  border-radius: 15%;
+  padding: 20px;
+}
+
+div.cajasventajas {
+  display: flex;
+  float: left;
+  flex-wrap: wrap;
+  width: 50%;
+  height: 25%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 10px 10px 10px 10px;
+  border: 3px solid green;
+  border-radius: 15%;
+  padding: 20px;
+}
+
+div.cajasriesgos {
+  display: flex;
+  float: left;
+  flex-wrap: wrap;
+  width: 50%;
+  height: 25%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 10px 10px 10px 10px;
+  border: 3px solid red;
+  border-radius: 15%;
+  padding: 20px;
+}
+
+div.cajasopinion {
+  display: flex;
+  float: left;
+  flex-wrap: wrap;
+  width: 50%;
+  height: 25%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 10px 10px 10px 10px;
+  border: 3px solid white;
+  border-radius: 15%;
+  padding: 20px;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+    <title>Claude Code</title>
+  </head>
+
+  <body>
+
+    <h1>Claude Code</h1>
+    <div class="cajas">
+      <div class="uso">
+        <h4 class="titleuso">Uso real</h4>
+        <div class="cajasuso" onclick="eventoClickParaQueSirve(this)">
+          <h4 class="titleuso">¿Para que sirve?</h4>
+        </div>
+        <div class="cajasuso" onmouseout="eventoOutSituaciones(this)">
+          <h4 class="titleuso">¿En qué situaciones se utiliza?</h4>
+        </div>
+        <div class="cajasuso" ondblclick="eventoDoubleEjemplo(this)">
+          <h4 class="titleuso">Ejemplo</h4>
+        </div>
+      </div>
+      <div class="funcionamiento">
+        <h4 class="titlefuncionamiento">Funcionamiento</h4>
+        <div class="cajasfuncionamiento" onmouseover="eventoOverFuncionConcreta(this)">
+          <h4 class="titlefuncionamiento">Función concreta de la IA</h4>
+        </div>
+        <div class="cajasfuncionamiento" onmousedown="eventoDownSinIa(this)">
+          <h4 class="titlefuncionamiento">¿Que pasaría si la IA no existiera?</h4>
+        </div>
+      </div>
+      <div class="datos">
+        <h4 class="titledatos">Datos</h4>
+        <div class="cajasdatos" onmouseout="eventoOutDatosIa(this)">
+          <h4 class="titledatos">Datos que usa la IA</h4>
+        </div>
+        <div class="cajasdatos" onclick="eventoClickDeDondeSonLosDatos(this)">
+          <h4 class="titledatos">¿De dónde salen esos datos?</h4>
+        </div>
+        <div class="cajasdatos" ondblclick="eventoDoubleDatosErroneos(this)">
+          <h4 class="titledatos">¿Qué problemas puede haber si son incorrectos?</h4>
+        </div>
+      </div>
+      <div class="ventajas">
+        <h4 class="titleventajas">Ventajas</h4>
+        <div class="cajasventajas" onmouseover="eventoOverVentajas(this)">
+          <h4 class="titlevnetajas">¿Qué mejora aporta la IA?</h4>
+        </div>
+        <div class="cajasventajas" onmousedown="eventoDownBeneficioIa(this)">
+          <h4 class="titlevnetajas">¿A quién beneficia la IA?</h4>
+        </div>
+      </div>
+      <div class="riesgos">
+        <h4 class="titleriesgos">Riesgos</h4>
+        <div class="cajasriesgos" onmouseover="eventoOverRiesgosIa(this)">
+          <h4 class="titleriesgos">¿Qué riesgos tiene la IA?</h4>
+        </div>
+        <div class="cajasriesgos">
+          <h4 class="titleriesgos">¿Qué riesgos tiene la IA?</h4>
+        </div>
+        <div class="cajasriesgos">
+          <h4 class="titleriesgos">¿Qué riesgos tiene la IA?</h4>
+        </div>
+      </div>
+      <div class="opinion">
+        <h4 class="titleopinion">Opinión personal</h4>
+      </div>
+    </div>
+
+
+
+  </body>
+</html>
