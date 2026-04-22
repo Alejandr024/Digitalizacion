@@ -74,12 +74,81 @@ function eventoDownBeneficioIa(cajas){
   cajas.innerText= "El beneficio de la IA es, siempre y que nunca cambia, para las empresas, ya que con la IA, las empresas ahorran en sueldos de empleados, que pueden invertir en la IA, que les sale más barato.";
 }
 
-
 function eventoOverRiesgosIa(cajas){
   cajas.style.color= "Black";
   cajas.style.background = "Pink";
   cajas.style.fontFamily= "Roboto";
-  cajas.innerText= "Los riesgos de la IA pueden ser: errores de código hecho por la IA, .";
+  cajas.innerText= "Algún riesgo que tiene la IA puede ser el de generar errores en el código hecho por la IA, es decir, que el código generado tenga erroes, y que tú no sepas resolverlos.";
 }
 
-//document.getElement(seleciona)ById("nombreId")(el parrafo o lo que tenga el id).textConcent(lugar donde escribe el texto)= input.value(recoge lo que escribe el usuario);
+function eventoDownInfluencia(cajas){
+  cajas.style.color= "Black";
+  cajas.style.background = "Pink";
+  cajas.style.fontFamily= "Roboto";
+  cajas.innerText= "Sí, por ejemplo, si se le da a una IA un texto con un sesgo, esta puede generar respuestas con ese mismo sesgo, y si el usuario no tiene conocimientos sobre ese tema, puede creer que esa respuesta es correcta, y dejarse influenciar por ella, en vez de investigar por su cuenta, y sacar sus propias conclusiones.";
+}
+
+function eventoDoubleRiesgosReales(cajas){
+  cajas.style.color= "Black";
+  cajas.style.background = "Pink";
+  cajas.style.fontFamily= "Roboto";
+  cajas.innerText= "Un ejemplo puede ser: la creacion de una base de datos, al importarle un diseño con sus columnas y tablas, la IA puede generar el código sin tener en cuenta las columnas que le pases, es decir, se inventa otras columnas, y si el usuario no se da cuenta, puede llevar a que, al importar datos, pueda generar errores de importación, pues no coincidirián los datos con las columnas.";
+}
+
+function eventoOverOpinionPersonal(cajas){
+  cajas.style.color= "Black";
+  cajas.style.background = "lightBlue";
+  cajas.style.fontFamily= "Roboto";
+  cajas.innerText= "Bajo mi punto de vista, el uso de Claude es uno de las mejores decisiones que he tomado, pues en muhcos casos, me ha ayudad a hacer mis trabajo y me los ha explicados, ya sea los erroes que he tenido como los conceptos que ha agregado yen qué me benefician.";
+}
+
+function eventoOutUtil(cajas){
+  cajas.style.color= "Black";
+  cajas.style.background = "lightBlue";
+  cajas.style.fontFamily= "Roboto";
+  cajas.innerText= "Es útil siempre y cuando sepas usarlo y sepas lo que estes haciendo, es decir, debes saber programar o diseñar para utilizarlo y entender lo que hace, y encontrar errores que pueda tener, pues no todas las IA's son perfectas.";
+}
+
+function eventoClickConfianza(cajas){
+  cajas.style.color= "Black";
+  cajas.style.background = "lightBlue";
+  cajas.style.fontFamily= "Roboto";
+  cajas.innerText= "Actualmente, no confío en la IA, pues, como he dicho anteriormente, este puede tener erroes, otros más graves y otros pequeños, pero no quita que son erroes. Por eso, y hasta el día de hoy, no me fío del todo de la IA.";
+}
+
+function jugar(usuario) {
+
+  let opciones = ["piedra", "papel", "tijeras"];
+  let maquina = opciones[Math.floor(Math.random() * 3)];
+
+  // Mostrar elección de la máquina
+  document.getElementById("maquina").innerHTML = maquina;
+
+  let resultado = "";
+
+  if (usuario == maquina) {
+    resultado = "Empate";
+  } 
+  else if ((usuario == "piedra" && maquina == "tijeras") || (usuario == "papel" && maquina == "piedra") || (usuario == "tijeras" && maquina == "papel")){
+    resultado = "Victoria";
+  } 
+  else {
+    resultado = "Derrota";
+  }
+
+  // Mostrar resultado
+  document.getElementById("resultado").innerHTML = resultado;
+
+  document.getElementById("resultado").innerHTML = resultado;
+
+  // Seleccionamos el div con clase "juego"
+  let idResultado = document.getElementById("resultado");
+
+  if (resultado == "Victoria") {
+    idResultado.style.backgroundColor = "lightgreen";
+  } else if (resultado == "Derrota") {
+    idResultado.style.backgroundColor = "lightcoral";
+  } else {
+    idResultado.style.backgroundColor = "lightyellow";
+  }
+}

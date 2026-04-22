@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <script src="script.js"></script>
-    <title>Claude Code</title>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <script src="script.js"></script>
+  <title>Claude Code</title>
+</head>
 
-  <body>
+<body>
 
-    <h1>Claude Code</h1>
+    <h1 class="title">Claude Code</h1>
     <div class="cajas">
       <div class="uso">
         <h4 class="titleuso">Uso real</h4>
@@ -61,19 +61,126 @@
         <div class="cajasriesgos" onmouseover="eventoOverRiesgosIa(this)">
           <h4 class="titleriesgos">¿Qué riesgos tiene la IA?</h4>
         </div>
-        <div class="cajasriesgos">
-          <h4 class="titleriesgos">¿Qué riesgos tiene la IA?</h4>
+        <div class="cajasriesgos" onmousedown="eventoDownInfluencia(this)">
+          <h4 class="titleriesgos">¿Puede influir en decisiones o comportamientos?</h4>
         </div>
-        <div class="cajasriesgos">
-          <h4 class="titleriesgos">¿Qué riesgos tiene la IA?</h4>
+        <div class="cajasriesgos" ondblclick="eventoDoubleRiesgosReales(this)">
+          <h4 class="titleriesgos">Riesgos Real</h4>
         </div>
       </div>
       <div class="opinion">
         <h4 class="titleopinion">Opinión personal</h4>
+        <div class="cajasopinion" onmouseover="eventoOverOpinionPersonal(this)">
+          <h4 class="titleopinion">Opinión de la IA</h4>
+        </div>
+        <div class="cajasopinion" onmouseout="eventoOutUtil(this)">
+          <h4 class="titleopinion">¿Es útil?</h4>
+        </div>
+        <div class="cajasopinion" onclick="eventoClickConfianza(this)">
+          <h4 class="titleopinion">¿Confías en la IA?</h4>
+        </div>
       </div>
+      <div class="juego">
+        <h4>Piedra, Papel o Tijeras</h4>
+        <div class="cajasjuegos">
+          <h4 class="titlejuego">Jugador</h4>
+          <div class="botones">
+            <button onclick="jugar('piedra')">🪨 Piedra</button>
+            <button onclick="jugar('papel')">📄 Papel</button>
+            <button onclick="jugar('tijeras')">✂️ Tijeras</button>
+          </div>
+        </div>
+        <div class="cajasjuegos">
+          <h4>Máquina</h4>
+          <p id="maquina">---</p>
+        </div>
+        <div class="cajasjuegos">
+            <h4>Resultado</h4>
+            <p id="resultado">---</p>          
+          </div>
+        </div>
     </div>
 
+    
+
+<!--
+    
+div class="contenedor">
+      <div class="caja">
+        <h2>Jugador</h2>
+        <div class="botones">
+          <button onclick="jugar('piedra')">🪨 Piedra</button>
+          <button onclick="jugar('papel')">📄 Papel</button>
+          <button onclick="jugar('tijeras')">✂️ Tijeras</button>
+        </div>
+      </div>
+    
+      <div class="caja">
+        <h2>Máquina</h2>
+        <p id="maquina">---</p>
+      </div>
+    
+      <div class="caja">
+        <h2>Resultado</h2>
+        <p id="resultado">---</p>
+      </div>
+</div>
+
+—----------------------------------------------------------
+
+div.contenedor {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+div.caja {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: orange;
+  width: 200px;
+  height: 200px;
+}
+
+div.botones {
+  display: flex;
+  flex-direction: row;
+}
+
+—----------------------------------------------------------------
 
 
-  </body>
+
+function jugar(usuario) {
+
+  let opciones = ["piedra", "papel", "tijeras"];
+  let maquina = opciones[Math.floor(Math.random() * 3)];
+
+  // Mostrar elección de la máquina
+  document.getElementById("maquina").innerHTML = maquina;
+
+  let resultado = "";
+
+  if (usuario == maquina) {
+    resultado = "Empate";
+  } 
+  else if ((usuario == "piedra" && maquina == "tijeras") || (usuario == "papel" && maquina == "piedra") || (usuario == "tijeras" && maquina == "papel")){
+    resultado = "Victoria";
+  } 
+  else {
+    resultado = "Derrota";
+  }
+
+  // Mostrar resultado
+  document.getElementById("resultado").innerHTML = resultado;
+}
+
+
+
+-->
+
+</body>
+
 </html>
