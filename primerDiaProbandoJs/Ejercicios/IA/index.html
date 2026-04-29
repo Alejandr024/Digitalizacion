@@ -82,19 +82,20 @@
         </div>
         <div class="juego">
           <h4>Piedra, Papel o Tijeras</h4>
-          <div class="cajasjuegos">
+          <div class="cajasjuegos" id="eleccion">
             <h4 class="titlejuego" id="jugador">Jugador: </h4>
-            <div class="botones">
-              <button class="piedra" onclick="jugar('piedra')">🪨 Piedra</button>
-              <button class="papel" onclick="jugar('papel')">📄 Papel</button>
-              <button class="tijera" onclick="jugar('tijeras')">✂️ Tijeras</button>
+            <div class="botones" id="botones">
+              <button class="piedra" id= "piedra" onclick="jugar('piedra')">🪨 Piedra</button>
+              <button class="papel" id= "papel" onclick="jugar('papel')">📄 Papel</button>
+              <button class="tijera"id= "tijera" onclick="jugar('tijeras')">✂️ Tijeras</button>
+              <button class="terminar" id="terminar" onclick="jugar('terminar')">Terminar</button>
             </div>
           </div>
-          <div class="cajasjuegos">
+          <div class="cajasjuegos" id="cajaMaquina">
             <h4>Máquina</h4>
             <p id="maquina">---</p>
           </div>
-          <div class="cajasjuegos">
+          <div class="cajasjuegos" id="cajaResultado">
               <h4>Resultado</h4>
               <p id="resultado">---</p>          
             </div>

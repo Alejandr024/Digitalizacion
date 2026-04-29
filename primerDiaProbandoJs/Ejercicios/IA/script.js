@@ -126,59 +126,86 @@ function eventoClickConfianza(cajas) {
 }
 
 function jugar(usuario) {
-  const eleccion = usuario;
+  do {
+    const eleccion = usuario;
 
-  let opciones = ["piedra", "papel", "tijeras"];
-  let maquina = opciones[Math.floor(Math.random() * 3)];
+    let opciones = ["piedra", "papel", "tijeras", "terminar"];
+    let maquina = opciones[Math.floor(Math.random() * 3)];
 
-  // Mostrar elección de la máquina
-  document.getElementById("maquina").innerHTML = maquina;
+    // Mostrar elección de la máquina
+    document.getElementById("maquina").innerHTML = maquina;
 
-  document.getElementById("jugador").innerHTML = "Jugador: " + eleccion;
+    document.getElementById("jugador").innerHTML = "Jugador: " + eleccion;
 
-  if (eleccion == "piedra") {
-    document.getElementById("jugador").style.background = "rgb(111, 111, 110)";
-    document.getElementById("jugador").style.color = "white";
-  } else if (eleccion == "papel") {
-    document.getElementById("jugador").style.background = "White";
-    document.getElementById("jugador").style.color = "black";
-  } else if (eleccion == "tijeras") {
-    document.getElementById("jugador").style.background = "rgb(174, 36, 5)";
-    document.getElementById("jugador").style.color = "White";
-  }
+    if (eleccion == "piedra") {
+      document.getElementById("eleccion").style.background = "rgb(111, 111, 110)";
+      document.getElementById("eleccion").style.color = "white";
+      document.getElementById("botones").style.background = "rgb(111, 111, 110)";
+    } else if (eleccion == "papel") {
+      document.getElementById("eleccion").style.background = "White";
+      document.getElementById("botones").style.background = "White";
+      document.getElementById("eleccion").style.color = "black";
+    } else if (eleccion == "tijeras") {
+      document.getElementById("piedra").style.backgroundColor = "rgb(174, 36, 5)";
+      document.getElementById("papel").style.backgroundColor = "rgb(174, 36, 5)";
+      document.getElementById("tijera").style.backgroundColor = "rgb(174, 36, 5)";
+      document.getElementById("terminar").style.backgroundColor = "rgb(174, 36, 5)";
+      document.getElementById("eleccion").style.background = "rgb(174, 36, 5)";
+      document.getElementById("eleccion").style.color = "White";
+      document.getElementById("botones").style.background = "rgb(174, 36, 5)";
+    } else if (eleccion == "terminar"){
+      document.getElementById("piedra").style.backgroundColor = "rgb(221, 224, 17)";
+      document.getElementById("papel").style.backgroundColor = "rgb(221, 224, 17)";
+      document.getElementById("tijera").style.backgroundColor = "rgb(221, 224, 17)";
+      document.getElementById("terminar").style.backgroundColor = "rgb(221, 224, 17)";
+      document.getElementById("eleccion").style.backgroundColor = "rgb(221, 224, 17)";
+      document.getElementById("botones").style.backgroundColor = "rgb(221, 224, 17)";
+      document.getElementById("maquina").innerHTML = "---";
+      document.getElementById("cajaMaquina").style.backgroundColor= "grey";
+      document.getElementById("maquina").style.backgroundColor= "grey";
+      document.getElementById("resultado").innerHTML = "---";
+      document.getElementById("cajaResultado").style.backgroundColor= "grey";
+      document.getElementById("resultado").style.backgroundColor= "grey";
+      break;
+    }
 
-  let idMaquina = document.getElementById("maquina");
+    let idCajaMaquina = document.getElementById("cajaMaquina");
+    let idMaquina = document.getElementById("maquina");
 
-  idMaquina.style.backgroundColor = "rgb(231, 22, 22)";
+    idMaquina.style.backgroundColor = "rgb(231, 22, 22)";
+    idCajaMaquina.style.background = "rgb(231, 22, 22)";
 
-  idMaquina.style.color = "white";
-  let resultado = "";
+    idMaquina.style.color = "white";
+    let resultado = "";
 
-  if (usuario == maquina) {
-    resultado = "Empate";
-  } else if (
-    (usuario == "piedra" && maquina == "tijeras") ||
-    (usuario == "papel" && maquina == "piedra") ||
-    (usuario == "tijeras" && maquina == "papel")
-  ) {
-    resultado = "Victoria";
-  } else {
-    resultado = "Derrota";
-  }
+    if (usuario == maquina) {
+      resultado = "Empate";
+    } else if (
+      (usuario == "piedra" && maquina == "tijeras") ||
+      (usuario == "papel" && maquina == "piedra") ||
+      (usuario == "tijeras" && maquina == "papel")
+    ) {
+      resultado = "Victoria";
+    } else {
+      resultado = "Derrota";
+    }
 
-  // Mostrar resultado
-  document.getElementById("resultado").innerHTML = resultado;
+    // Mostrar resultado
+    document.getElementById("resultado").innerHTML = resultado;
 
-  document.getElementById("resultado").innerHTML = resultado;
+    // Seleccionamos el div con clase "juego"
+    let idCajaResultado = document.getElementById("cajaResultado");
+    let idResultado = document.getElementById("resultado");
 
-  // Seleccionamos el div con clase "juego"
-  let idResultado = document.getElementById("resultado");
-
-  if (resultado == "Victoria") {
-    idResultado.style.backgroundColor = "lightgreen";
-  } else if (resultado == "Derrota") {
-    idResultado.style.backgroundColor = "lightcoral";
-  } else if (resultado == "Empate") {
-    idResultado.style.backgroundColor = "lightyellow";
-  }
+    if (resultado == "Victoria") {
+      idResultado.style.backgroundColor = "lightgreen";
+      idCajaResultado.style.background = "lightgreen";
+    } else if (resultado == "Derrota") {
+      idResultado.style.backgroundColor = "lightcoral";
+      idCajaResultado.style.background = "lightcoral";
+    } else if (resultado == "Empate") {
+      idResultado.style.backgroundColor = "lightyellow";
+      idCajaResultado.style.background = "lightyellow";
+    }
+  } while (usuraio != opciones[3]);
 }
