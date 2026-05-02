@@ -34,6 +34,7 @@ div.uso {
   border: 3px solid black;
   border-radius: 15%;
   background-color: lightblue;
+  box-shadow: 3px 3px 5px 0px black;
   padding: 40px;
 }
 
@@ -49,6 +50,7 @@ div.funcionamiento {
   margin: 20px 20px 20px 20px;
   border: 3px solid rgb(0, 0, 0);
   background: lightgreen;
+  box-shadow: 3px 3px 5px 0px black;
   border-radius: 15%;
   padding: 40px;
 }
@@ -64,6 +66,7 @@ div.datos {
   text-align: center;
   margin: 20px 20px 20px 20px;
   border: 3px solid rgb(0, 0, 0);
+  box-shadow: 3px 3px 5px 0px black;
   background: orange;
   border-radius: 15%;
   padding: 40px;
@@ -80,6 +83,7 @@ div.ventajas {
   text-align: center;
   margin: 20px 20px 20px 20px;
   border: 3px solid rgb(0, 0, 0);
+  box-shadow: 3px 3px 5px 0px black;
   background: #DAB1DA;
   border-radius: 15%;
   padding: 40px;
@@ -96,9 +100,10 @@ div.riesgos {
   text-align: center;
   margin: 20px 20px 20px 20px;
   border: 3px solid rgb(0, 0, 0);
+  box-shadow: 3px 3px 5px 0px black;
   background: Pink;
   border-radius: 15%;
-  padding: 40px;
+  padding: 45px;
 }
 
 div.opinion {
@@ -112,6 +117,7 @@ div.opinion {
   text-align: center;
   margin: 20px 20px 20px 20px;
   border: 3px solid rgb(0, 0, 0);
+  box-shadow: 3px 3px 5px 0px black;
   background: lightblue;
   border-radius: 15%;
   padding: 40px;
@@ -160,7 +166,7 @@ div.cajasdatos {
   flex-direction: column;
   text-align: center;
   margin: 10px 10px 10px 10px;
-  border: 3px solid greenyellow;
+  border: 3px solid black;
   border-radius: 50%;
   padding: 20px;
 }
@@ -194,7 +200,7 @@ div.cajasriesgos {
   margin: 10px 10px 10px 10px;
   border: 3px solid rgb(0, 0, 0);
   border-radius: 50%;
-  padding: 20px;
+  padding: 35px;
 }
 
 div.cajasopinion {
@@ -225,7 +231,9 @@ div.juego {
   margin: 20px 20px 20px 20px;
   border: 3px solid rgb(0, 0, 0);
   border-radius: 15%;
+  box-shadow: 3px 3px 5px 0px black;
   padding: 40px;
+  background-color: blueviolet
 }
 
 div.cajasjuegos {
@@ -251,6 +259,7 @@ button{
   border-radius: 50%;
   padding: 10px;
   text-align: center;
+  background: none;
 }
 
 button.piedra:hover{
@@ -267,14 +276,14 @@ button.papel:hover{
 
 button.tijera:hover{
   padding: 20px;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(174, 36, 5);
   font-weight: bold;
 
 }
 
 button.terminar:hover{
   padding: 20px;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(221, 224, 17);
   font-weight: bold;
 }
 

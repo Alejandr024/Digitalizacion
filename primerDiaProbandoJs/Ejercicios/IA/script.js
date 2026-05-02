@@ -129,7 +129,7 @@ function jugar(usuario) {
   do {
     const eleccion = usuario;
 
-    let opciones = ["piedra", "papel", "tijeras", "terminar"];
+    let opciones = ["Piedra", "Papel", "Tijeras", "Terminar"];
     let maquina = opciones[Math.floor(Math.random() * 3)];
 
     // Mostrar elección de la máquina
@@ -137,35 +137,32 @@ function jugar(usuario) {
 
     document.getElementById("jugador").innerHTML = "Jugador: " + eleccion;
 
-    if (eleccion == "piedra") {
-      document.getElementById("eleccion").style.background = "rgb(111, 111, 110)";
+    if (eleccion.toLowerCase() == opciones[0].toLowerCase()) {
+      document.getElementById("eleccion").style.background =
+        "rgb(111, 111, 110)";
       document.getElementById("eleccion").style.color = "white";
-      document.getElementById("botones").style.background = "rgb(111, 111, 110)";
-    } else if (eleccion == "papel") {
+      document.getElementById("botones").style.background =
+        "rgb(111, 111, 110)";
+    } else if (eleccion.toLowerCase() == opciones[1].toLowerCase()) {
       document.getElementById("eleccion").style.background = "White";
       document.getElementById("botones").style.background = "White";
       document.getElementById("eleccion").style.color = "black";
-    } else if (eleccion == "tijeras") {
-      document.getElementById("piedra").style.backgroundColor = "rgb(174, 36, 5)";
-      document.getElementById("papel").style.backgroundColor = "rgb(174, 36, 5)";
-      document.getElementById("tijera").style.backgroundColor = "rgb(174, 36, 5)";
-      document.getElementById("terminar").style.backgroundColor = "rgb(174, 36, 5)";
+    } else if (eleccion.toLowerCase() == opciones[2].toLowerCase()) {
       document.getElementById("eleccion").style.background = "rgb(174, 36, 5)";
-      document.getElementById("eleccion").style.color = "White";
       document.getElementById("botones").style.background = "rgb(174, 36, 5)";
-    } else if (eleccion == "terminar"){
-      document.getElementById("piedra").style.backgroundColor = "rgb(221, 224, 17)";
-      document.getElementById("papel").style.backgroundColor = "rgb(221, 224, 17)";
-      document.getElementById("tijera").style.backgroundColor = "rgb(221, 224, 17)";
-      document.getElementById("terminar").style.backgroundColor = "rgb(221, 224, 17)";
-      document.getElementById("eleccion").style.backgroundColor = "rgb(221, 224, 17)";
-      document.getElementById("botones").style.backgroundColor = "rgb(221, 224, 17)";
+    } else if (eleccion.toLowerCase() == opciones[3].toLowerCase()) {
+      document.getElementById("eleccion").style.background =
+        "rgb(221, 224, 17)";
+      document.getElementById("botones").style.background = "rgb(221, 224, 17)";
       document.getElementById("maquina").innerHTML = "---";
-      document.getElementById("cajaMaquina").style.backgroundColor= "grey";
-      document.getElementById("maquina").style.backgroundColor= "grey";
+      document.getElementById("cajaMaquina").style.backgroundColor =
+        "lightgray";
+      document.getElementById("maquina").style.color = "black";
+      document.getElementById("maquina").style.backgroundColor = "lightgray";
       document.getElementById("resultado").innerHTML = "---";
-      document.getElementById("cajaResultado").style.backgroundColor= "grey";
-      document.getElementById("resultado").style.backgroundColor= "grey";
+      document.getElementById("cajaResultado").style.backgroundColor =
+        "lightgray";
+      document.getElementById("resultado").style.backgroundColor = "lightgray";
       break;
     }
 
@@ -181,9 +178,9 @@ function jugar(usuario) {
     if (usuario == maquina) {
       resultado = "Empate";
     } else if (
-      (usuario == "piedra" && maquina == "tijeras") ||
-      (usuario == "papel" && maquina == "piedra") ||
-      (usuario == "tijeras" && maquina == "papel")
+      (usuario == "Piedra" && maquina == "Tijeras") ||
+      (usuario == "Papel" && maquina == "Piedra") ||
+      (usuario == "Tijeras" && maquina == "Papel")
     ) {
       resultado = "Victoria";
     } else {
